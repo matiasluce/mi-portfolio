@@ -54,28 +54,35 @@ const sectionObserver = new IntersectionObserver((entries) => {
 }, { rootMargin: '-45% 0px -50% 0px' });
 document.querySelectorAll('main section[id]').forEach((s) => sectionObserver.observe(s));
 
-// ===== Formulario de contacto =====
-// TODO: reemplazar por Formspree/EmailJS, o poner el correo real aquí.
-const CONTACT_EMAIL = '';
+// ===== Formulario de contacto (Formspree) =====
+const FORM_ENDPOINT = 'https://formspree.io/f/mqpqyedb';
 
 const form = document.getElementById('contact-form');
 const status = document.getElementById('form-status');
+const submitBtn = form.querySelector('button[type="submit"]');
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
   if (!form.checkValidity()) {
     status.textContent = 'Completá todos los campos con un email válido.';
     return;
   }
-  if (!CONTACT_EMAIL) {
-    status.textContent = 'El envío todavía no está configurado. Escribime por LinkedIn.';
-    return;
+  submitBtn.disabled = true;
+  status.textContent = 'Enviando...';
+  try {
+    const res = await fetch(FORM_ENDPOINT, {
+      method: 'POST',
+      headers: { Accept: 'application/json' },
+      body: new FormData(form),
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    form.reset();
+    status.textContent = '¡Gracias! Tu mensaje fue enviado.';
+  } catch {
+    status.textContent = 'No se pudo enviar. Probá de nuevo o escribime por LinkedIn.';
+  } finally {
+    submitBtn.disabled = false;
   }
-  const data = new FormData(form);
-  const subject = encodeURIComponent(`Contacto desde el portfolio: ${data.get('name')}`);
-  const body = encodeURIComponent(`${data.get('message')}\n\nDe: ${data.get('name')} <${data.get('email')}>`);
-  window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
 });
-
 // ===== Año del pie de página =====
 document.getElementById('year').textContent = new Date().getFullYear();
