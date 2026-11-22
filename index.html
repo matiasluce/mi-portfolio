@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matías Lucero · Desarrollador Web</title>
+  <meta name="description" content="Portfolio de Matías Lucero, desarrollador web y estudiante de Desarrollo de Software en La Pampa, Argentina.">
+  <meta name="theme-color" content="#0b0b12">
+
+  <!-- Open Graph (vista previa en redes). TODO: agregar og:image y og:url al publicar -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Matías Lucero · Desarrollador Web">
+  <meta property="og:description" content="Creo sitios web modernos, funcionales y fáciles de usar.">
+  <meta property="og:locale" content="es_AR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Principal">
+      <a class="brand" href="#inicio">ML<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#quien-soy">Quién soy</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Cambiar a modo claro">◐</button>
+        <button class="icon-btn menu-btn" id="menu-btn" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 4.1 Inicio (Hero) -->
+    <section id="inicio" class="hero">
+      <div class="container hero-inner reveal">
+        <p class="eyebrow">Hola, soy</p>
+        <h1>Matías Lucero</h1>
+        <p class="role">Desarrollador Web · Estudiante de Desarrollo de Software</p>
+        <p class="lead">Creo sitios web modernos, funcionales y fáciles de usar.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn btn-ghost" href="#contacto">Contactarme</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.2 Quién soy -->
+    <section id="quien-soy" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Quién soy</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <!-- TODO: reemplazar por el texto definitivo -->
+            <p>Soy de Eduardo Castex, La Pampa, Argentina. Me motiva convertir ideas en sitios que la gente pueda usar de verdad, y aprender algo nuevo en cada proyecto.</p>
+            <p>Hoy combino mi carrera con trabajos freelance y proyectos en equipo.</p>
+          </div>
+          <div class="cards reveal">
+            <article class="card">
+              <h3>Formación</h3>
+              <p>Tecnicatura Superior en Desarrollo de Software en ITES (cursando desde 2026).</p>
+            </article>
+            <article class="card">
+              <h3>Experiencia</h3>
+              <ul>
+                <li>Desarrollador web freelance: sitio y mantenimiento de una radio online, y conexión de su transmisión a un servidor de retransmisión.</li>
+                <li>Técnico en reparación de computadoras y celulares desde 2020.</li>
+                <li>Campus virtual de ITES en equipo (principalmente frontend).</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Herramientas</h3>
+              <ul class="tags">
+                <li>Git</li><li>VS Code</li><li>Kiro</li><li>Office</li>
+              </ul>
+            </article>
+            <article class="card">
+              <h3>Idiomas</h3>
+              <p>Español nativo · Inglés básico · Portugués básico</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.3 Proyectos -->
+    <section id="proyectos" class="section">
+      <div class="container">
+        <h2 class="section-title reveal">Proyectos</h2>
+        <div class="projects">
+          <!-- TODO: agregar capturas en assets/img/ y enlaces reales -->
+          <article class="project reveal">
+            <div class="project-img" role="img" aria-label="Captura pendiente del sitio de Máxima 89.9 FM"></div>
+            <div class="project-body">
+              <h3>Máxima 89.9 FM</h3>
+              <p>Sitio web y mantenimiento de una radio online, con su transmisión conectada a un servidor de retransmisión.</p>
+              <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+              <div class="links"><a href="#" aria-disabled="true">Demo (pendiente)</a></div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project-img" role="img" aria-label="Captura pendiente del campus virtual de ITES"></div>
+            <div class="project-body">
+              <h3>Campus virtual de ITES</h3>
+              <p>Desarrollo en equipo del campus virtual del instituto, con foco en el frontend.</p>
+              <ul class="tags"><li>Frontend</li><li>Trabajo en equipo</li></ul>
+              <div class="links"><a href="#" aria-disabled="true">Repositorio (pendiente)</a></div>
+            </div>
+          </article>
+          <article class="project reveal">
+            <div class="project-img" role="img" aria-label="Espacio reservado para un proyecto futuro"></div>
+            <div class="project-body">
+              <h3>Próximo proyecto</h3>
+              <p>Espacio para proyectos personales o de la carrera.</p>
+              <ul class="tags"><li>A completar</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4.4 Contacto -->
+    <section id="contacto" class="section">
+      <div class="container contact">
+        <h2 class="section-title reveal">Contacto</h2>
+        <p class="availability reveal"><span class="dot" aria-hidden="true"></span>Disponible para proyectos freelance</p>
+        <div class="contact-grid reveal">
+          <form id="contact-form" novalidate>
+            <label for="name">Nombre</label>
+            <input id="name" name="name" type="text" autocomplete="name" required>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <label for="message">Mensaje</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <button class="btn btn-primary" type="submit">Enviar</button>
+            <p class="form-status" id="form-status" role="status"></p>
+          </form>
+          <ul class="social">
+            <li><a href="https://linkedin.com/in/matiaslucero-dev" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/matiasluce" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>La Pampa, Argentina</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Matías Lucero · La Pampa, Argentina</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
